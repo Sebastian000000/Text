@@ -2,6 +2,7 @@ String title = "Wahoo!";
 float titleX, titleY, titleWidth, titleHeight;
 PFont titleFont;
 color purple=#920093, resetDefaultInk=#FFFFFF;//Not NightMode friendly
+int titleSize;
 //
 //CANVAS
 size (500, 600);//Portrait Mode, fits on my display
@@ -24,5 +25,7 @@ rect(titleX, titleY, titleWidth, titleHeight);
 fill(purple);//Ink, hexidecimal copied from color
 textAlign( CENTER, CENTER ); //Align x and y see processing.org / reference
 //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
+titleSize = 50; //change number until it fits
+textFont(titleFont, titleSize);
 text(title, titleX, titleY, titleWidth, titleHeight);
 fill(resetDefaultInk);
